@@ -1,0 +1,220 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLOY STEEL PLANT</title>
+  <link rel="stylesheet" type="text/css" href="asp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script type="text/javascript" src="asphome.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      
+      <div class="company">
+        <img src="sail_logo.png" alt="SAIL">
+        <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+      </div>
+
+      <div class="lang" role="navigation" aria-label="Language switcher">
+        <a href="#" data-lang="en">English</a> |
+        <a href="#" data-lang="hi">हिंदी</a>
+      </div>
+    </nav>
+
+  <nav class="navbar_2" aria-label="Main navigation">
+    <div class="column" id="column">
+    <div class="nav-item active" data-key="1">Home</div>
+    <div class="nav-item" data-key="2">SAIL Net</div>
+    <div class="nav-item" data-key="3">Knowledge Portal</div>
+    <div class="nav-item" data-key="4">ASP Contacts</div>
+    <div class="nav-item" data-key="5">Birthdays</div>
+    <div class="nav-item" data-key="6">Vigilances</div>
+    <div class="nav-item" data-key="7">P & A</div>
+    <div class="nav-item" data-key="8">EMS & IED</div>
+    <div class="nav-item" data-key="9">User Login</div>
+    <div class="nav-item" data-key="10">Jagraiti</div>
+    </div>
+
+    <div class="search">
+      <form class="searchBox">
+        <input type="search" placeholder="Search..." />
+        <button type="submit" class="searchBtn"><i class="fas fa-search"></i></i></button>
+      </form>
+    </div>
+
+  </nav>
+    
+
+  </header>
+
+  <nav>
+    
+  </nav>
+
+  <main>
+ 
+  </main>
+
+  <footer>
+    <p>© 2025</p>
+  </footer>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALLOY STEEL PLANT — Home</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <!-- Local stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- SAIL Banner Text -->
+  <!-- <div class="sail-banner">
+    <div class="sail-banner-text">#HarKaaMDeshKeNaam</div>
+  </div> -->
+
+  <!-- Main Header -->
+  <header class="site-header" role="banner">
+
+    <!-- Top Dark Blue Bar (like SAIL website) -->
+    <div class="topbar">
+      <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
+      <nav class="lang" aria-label="Language">
+        <a href="#" class="lang-link">English</a> | 
+        <a href="#" class="lang-link">हिंदी</a>
+      </nav>
+    </div>
+
+    <!-- Middle White Header Section -->
+   <div class="mid-header">
+  <div class="company">
+    <img src="images/sail_logo.png" alt="SAIL logo" class="logo" />
+    <div class="title-wrap">
+      <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+      <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+    </div>
+  </div>
+
+  <div class="banner-box">
+    <img src="images/harkam.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
+  </div>
+</div>
+
+    <!-- Blue Navigation Bar -->
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <div class="nav-left">
+        <button class="nav-item active">Home</button>
+        <button class="nav-item">SAILNet</button>
+        <button class="nav-item">Knowledge Portal</button>
+        <button class="nav-item">ASP Contacts</button>
+        <button class="nav-item">Birthdays</button>
+        <button class="nav-item">Vigilance</button>
+        <button class="nav-item">P & A</button>
+        <button class="nav-item">EMS&IED</button>
+        <button class="nav-item">User Login</button>
+        <button class="nav-item">Jagriti</button>
+      </div>
+
+      <div class="nav-right">
+        <form class="searchBox" onsubmit="return false;">
+          <input type="search" placeholder="Search..." aria-label="Search">
+          <button class="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Picture Gallery -->
+    <section class="gallery-wrapper" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="section-title">
+        <i class="fas fa-image"></i> Picture Gallery
+      </h2>
+
+      <div class="gallery">
+        <button class="arrow left" id="prev"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="viewer">
+          <img id="mainImage" src="images/gallery1.jpg" alt="Gallery image">
+          <div class="counter">
+            <span id="current">1</span> / <span id="total">6</span>
+          </div>
+        </div>
+
+        <button class="arrow right" id="next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <div class="thumbs" id="thumbs">
+        <img class="thumb active" src="images/gallery1_thumb.jpg" data-full="images/gallery1.jpg" alt="">
+        <img class="thumb" src="images/gallery2_thumb.jpg" data-full="images/gallery2.jpg" alt="">
+        <img class="thumb" src="images/gallery3_thumb.jpg" data-full="images/gallery3.jpg" alt="">
+        <img class="thumb" src="images/gallery4_thumb.jpg" data-full="images/gallery4.jpg" alt="">
+        <img class="thumb" src="images/gallery5_thumb.jpg" data-full="images/gallery5.jpg" alt="">
+        <img class="thumb" src="images/gallery6_thumb.jpg" data-full="images/gallery6.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Accordion Section -->
+    <section class="accordion-wrapper">
+      <div class="accordion">
+
+        <button class="acc-trigger">
+          About Us <span class="acc-icon">▸</span>
+        </button>
+        <div class="acc-panel">
+          Alloy Steels Plant (ASP), Durgapur — a short about text here...
+        </div>
+
+        <button class="acc-trigger">
+          ASP Management Team <span class="acc-icon">▸</span>
+        </button>
+        <div class="acc-panel">
+          Management team details / links...
+        </div>
+
+        <button class="acc-trigger">
+          Liaison and Grievance <span class="acc-icon">▸</span>
+        </button>
+        <div class="acc-panel">
+          Grievance contact info and process...
+        </div>
+
+        <button class="acc-trigger">
+          Contact Us <span class="acc-icon">▸</span>
+        </button>
+        <div class="acc-panel">
+          Address, phone numbers, map etc...
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div>Developed by C&IT, ASP — © <span id="year"></span></div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+</body>
+</html>

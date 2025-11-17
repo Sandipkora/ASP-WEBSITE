@@ -1,0 +1,366 @@
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.lang a {
+  color: #3a7bd5;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+.lang a:hover {
+  background: rgba(38, 80, 221, 0.18);
+}
+
+.lang span {
+  color: rgba(255,255,255,0.5);
+}
+
+.navbar_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e1e1ef;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+.navbar_2 .column {
+    display: flex;
+    gap: 8px;
+} */
+
+
+
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #E7F1FA; /* Light blue like SAIL */
+  color: #003A70;      /* Dark SAIL Blue */
+  line-height: 1.5;
+}
+
+/* ============================================================
+   SAIL BANNER (#HarKaaMDeshKeNaam)
+============================================================ */
+.sail-banner {
+  width: 100%;
+  background: linear-gradient(to right, #ffffff, #e6f0fb);
+  padding: 18px 25px;
+  border-bottom: 3px solid #003A70;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sail-banner-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #003A70;
+  background: #F4A424;
+  padding: 6px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+  letter-spacing: 0.4px;
+}
+
+/* ============================================================
+   HEADER (TOP BLUE BAR)
+============================================================ */
+.topbar {
+  background: #003A70;
+  color: white;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lang-link {
+  color: #F4A424;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lang-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================================================
+   MIDDLE WHITE HEADER (Logo + Plant Name)
+============================================================ */
+.mid-header {
+  background: white;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid #003A70;
+}
+
+/* banner image on right */
+.banner-box {
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  height: 70px;  /* adjust as needed */
+  object-fit: contain;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.title-wrap h1 {
+  font-size: 26px;
+  color: #003A70;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #003A70;
+}
+
+/* ============================================================
+   BLUE NAV BAR (Main Menu)
+============================================================ */
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #005FA3; /* Light SAIL blue */
+  border-bottom: 4px solid #003A70;
+}
+
+.nav-left {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  background: white;
+  color: #003A70;
+  padding: 7px 14px;
+  border-radius: 4px;
+  border: 1px solid #d4d4d4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.nav-item.active {
+  background: #F4A424;
+  color: white;
+  border: none;
+}
+
+.nav-item:hover {
+  background: #003A70;
+  color: white;
+}
+
+/* Search */
+.searchBox input {
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.searchBtn {
+  background: #F4A424;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ============================================================
+   SECTION TITLE
+============================================================ */
+.section-title {
+  margin: 25px 30px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #003A70;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ============================================================
+   GALLERY (Viewer + Thumbnails)
+============================================================ */
+.gallery-wrapper {
+  margin: 20px 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #c7d5e5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.viewer {
+  width: 760px;
+  height: 380px;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+
+.viewer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.counter {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  color: white;
+  opacity: 0.9;
+  font-size: 13px;
+}
+
+.arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 35px;
+  color: white;
+}
+
+/* Thumbnails */
+.thumbs {
+  margin-top: 15px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px;
+}
+
+.thumb {
+  width: 95px;
+  height: 60px;
+  border-radius: 4px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.thumb.active {
+  border: 3px solid #F4A424;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+/* ============================================================
+   ACCORDION
+============================================================ */
+.accordion-wrapper {
+  margin: 10px 30px 60px;
+}
+
+.acc-trigger {
+  background: #005FA3;
+  color: white;
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+
+.acc-panel {
+  display: none;
+  background: white;
+  padding: 15px;
+  border-left: 3px solid #005FA3;
+  border-right: 3px solid #005FA3;
+  border-bottom: 3px solid #005FA3;
+  border-radius: 0 0 4px 4px;
+  font-size: 15px;
+  color: #003A70;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.site-footer {
+  background: #003A70;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  margin-top: 40px;
+}

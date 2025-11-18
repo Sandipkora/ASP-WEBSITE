@@ -1,110 +1,26 @@
-/* .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.company {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.navbar img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-}
-
-.navbar h1 {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin: 0;
-}
-
-.lang {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  font-size: 15px;
-  white-space: nowrap;
-}
-
-.lang a {
-  color: #3a7bd5;
-  padding: 3px 6px;
-  border-radius: 4px;
-}
-
-.lang a:hover {
-  background: rgba(38, 80, 221, 0.18);
-}
-
-.lang span {
-  color: rgba(255,255,255,0.5);
-}
-
-.navbar_2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #e1e1ef;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-family: Arial, sans-serif;
-}
-
-.navbar_2 .column {
-    display: flex;
-    gap: 8px;
-} */
-
-
-
-/* GLOBAL RESET */
+/* ============================================================
+   GLOBAL RESET
+============================================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #E7F1FA; /* Light blue like SAIL */
-  color: #003A70;      /* Dark SAIL Blue */
+  background: #E7F1FA;
+  color: #003A70;
   line-height: 1.5;
 }
 
 /* ============================================================
-   SAIL BANNER (#HarKaaMDeshKeNaam)
-============================================================ */
-.sail-banner {
-  width: 100%;
-  background: linear-gradient(to right, #ffffff, #e6f0fb);
-  padding: 18px 25px;
-  border-bottom: 3px solid #003A70;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.sail-banner-text {
-  font-size: 22px;
-  font-weight: 700;
-  color: #003A70;
-  background: #F4A424;
-  padding: 6px 16px;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.14);
-  letter-spacing: 0.4px;
-}
-
-/* ============================================================
-   HEADER (TOP BLUE BAR)
+   TOP BLUE BAR (SAIL)
 ============================================================ */
 .topbar {
   background: #003A70;
@@ -126,7 +42,7 @@ body {
 }
 
 /* ============================================================
-   MIDDLE WHITE HEADER (Logo + Plant Name)
+   MIDDLE WHITE HEADER (Logo + Plant Name + Banner)
 ============================================================ */
 .mid-header {
   background: white;
@@ -135,17 +51,6 @@ body {
   justify-content: space-between;
   align-items: center;
   border-bottom: 4px solid #003A70;
-}
-
-/* banner image on right */
-.banner-box {
-  display: flex;
-  align-items: center;
-}
-
-.banner-img {
-  height: 70px;  /* adjust as needed */
-  object-fit: contain;
 }
 
 .company {
@@ -172,15 +77,25 @@ body {
   color: #003A70;
 }
 
+.banner-box {
+  display: flex;
+  align-items: center;
+}
+
+.banner-img {
+  height: 64px;
+  object-fit: contain;
+}
+
 /* ============================================================
-   BLUE NAV BAR (Main Menu)
+   MAIN NAVIGATION BAR
 ============================================================ */
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: #005FA3; /* Light SAIL blue */
+  background: #005FA3;
   border-bottom: 4px solid #003A70;
 }
 
@@ -229,93 +144,72 @@ body {
 }
 
 /* ============================================================
-   SECTION TITLE
+   FULL-WIDTH HERO SLIDER
 ============================================================ */
-.section-title {
-  margin: 25px 30px 10px;
-  font-size: 20px;
-  font-weight: 700;
-  color: #003A70;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* ============================================================
-   GALLERY (Viewer + Thumbnails)
-============================================================ */
-.gallery-wrapper {
-  margin: 20px 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 6px;
-  border: 1px solid #c7d5e5;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-.gallery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.viewer {
-  width: 760px;
-  height: 380px;
-  background: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-slider {
   position: relative;
-  border-radius: 6px;
+  width: 100%;
+  height: 500px;        /* increased height */
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+  background: black;
+  margin-bottom: 10px;
 }
 
-.viewer img {
-  max-width: 100%;
-  max-height: 100%;
+.slides {
+  display: flex;
+  height: 100%;
+  transition: 0.7s ease-in-out;
 }
 
-.counter {
+.slide {
+  min-width: 100%;
+  height: 100%;
+  object-fit: contain;   /* show full image */
+  background: black;     /* avoid white gaps */
+}
+
+/* Slider Arrows */
+.hero-prev, .hero-next {
   position: absolute;
-  left: 15px;
-  bottom: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(0,0,0,0.4);
   color: white;
-  opacity: 0.9;
-  font-size: 13px;
-}
-
-.arrow {
-  background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 35px;
-  color: white;
-}
-
-/* Thumbnails */
-.thumbs {
-  margin-top: 15px;
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  padding: 8px;
-}
-
-.thumb {
-  width: 95px;
-  height: 60px;
+  padding: 8px 14px;
   border-radius: 4px;
-  border: 3px solid transparent;
-  cursor: pointer;
-  object-fit: cover;
+  z-index: 10;
 }
 
-.thumb.active {
-  border: 3px solid #F4A424;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+.hero-prev:hover, .hero-next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.hero-prev { left: 20px; }
+.hero-next { right: 20px; }
+
+/* ============================================================
+   THUMBNAILS (HIDDEN)
+============================================================ */
+.slider-thumbs {
+  display: none !important; /* HIDE THUMBNAILS */
+}
+
+/* ------------------------------------------------------------
+   Remove broken image icon completely
+------------------------------------------------------------- */
+img {
+  font-size: 0 !important;
+}
+
+img:before {
+  content: none !important;
+}
+
+img:not([src]), img[src=""] {
+  visibility: hidden !important;
 }
 
 /* ============================================================
@@ -357,10 +251,45 @@ body {
 /* ============================================================
    FOOTER
 ============================================================ */
+/* ============================================================
+   MODERN SAIL-STYLE FOOTER
+============================================================ */
+
 .site-footer {
   background: #003A70;
   color: white;
-  padding: 15px 30px;
+  padding: 25px 30px;
   text-align: center;
   margin-top: 40px;
+}
+
+.footer-text p {
+  font-size: 15px;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.footer-logo {
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(1.1);
+  transition: 0.3s;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.9;
 }

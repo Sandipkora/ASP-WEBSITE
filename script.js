@@ -1,53 +1,81 @@
-// script.js
+/* ============================================================
+   HERO SLIDER WITH THUMBNAILS
+============================================================ */
 
-// Gallery setup
-const thumbs = Array.from(document.querySelectorAll('.thumb'));
-const mainImage = document.getElementById('mainImage');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const currentSpan = document.getElementById('current');
-const totalSpan = document.getElementById('total');
+let heroIndex = 0;
 
-let index = 0;
-const images = thumbs.map(t => t.dataset.full);
-totalSpan.textContent = images.length;
+// MUST MATCH HTML ID
+const slideContainer = document.getElementById('slides');
+const heroSlides = document.querySelectorAll('.slide');
+const thumbs = document.querySelectorAll('.thumb-img');
+const totalSlides = heroSlides.length;
 
-// set initial
-function showIndex(i) {
-  if (i < 0) i = images.length - 1;
-  if (i >= images.length) i = 0;
-  index = i;
-  mainImage.src = images[index];
-  currentSpan.textContent = (index + 1);
-  document.querySelectorAll('.thumb').forEach((t, idx) => {
-    t.classList.toggle('active', idx === index);
+function showHeroSlide(i) {
+  heroIndex = i;
+
+  // Move slide
+  slideContainer.style.transform = `translateX(-${i * 100}%)`;
+
+  // Update thumbnails
+  if (thumbs.length > 0) {
+    thumbs.forEach(t => t.classList.remove('active'));
+    thumbs[i].classList.add('active');
+  }
+}
+
+// Next button
+const nextBtn = document.querySelector('.hero-next');
+if (nextBtn) {
+  nextBtn.onclick = () => {
+    heroIndex = (heroIndex + 1) % totalSlides;
+    showHeroSlide(heroIndex);
+  };
+}
+
+// Previous button
+const prevBtn = document.querySelector('.hero-prev');
+if (prevBtn) {
+  prevBtn.onclick = () => {
+    heroIndex = (heroIndex - 1 + totalSlides) % totalSlides;
+    showHeroSlide(heroIndex);
+  };
+}
+
+// Thumbnail click
+// Thumbnail click (skip if thumbnails hidden)
+if (thumbs.length > 0) {
+  thumbs.forEach(t => {
+    t.onclick = () => {
+      const index = parseInt(t.dataset.index);
+      showHeroSlide(index);
+    };
   });
 }
 
-thumbs.forEach((t, i) => {
-  t.addEventListener('click', () => showIndex(i));
-});
+// Auto-slide
+setInterval(() => {
+  heroIndex = (heroIndex + 1) % totalSlides;
+  showHeroSlide(heroIndex);
+}, 5000);
 
-prevBtn.addEventListener('click', () => showIndex(index - 1));
-nextBtn.addEventListener('click', () => showIndex(index + 1));
+// Initialize first slide
+showHeroSlide(0);
 
-// keyboard support
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft') showIndex(index - 1);
-  if (e.key === 'ArrowRight') showIndex(index + 1);
-});
 
-// init
-showIndex(0);
+/* ============================================================
+   ACCORDION
+============================================================ */
 
-// Accordion
 document.querySelectorAll('.acc-trigger').forEach(btn => {
   btn.addEventListener('click', () => {
     const panel = btn.nextElementSibling;
     const isOpen = panel.style.display === 'block';
-    // close all
+
+    // Close all
     document.querySelectorAll('.acc-panel').forEach(p => p.style.display = 'none');
-    document.querySelectorAll('.acc-trigger .acc-icon').forEach(ic => ic.textContent = '▸');
+    document.querySelectorAll('.acc-icon').forEach(ic => ic.textContent = '▸');
+
+    // Open selected
     if (!isOpen) {
       panel.style.display = 'block';
       btn.querySelector('.acc-icon').textContent = '▾';
@@ -55,5 +83,8 @@ document.querySelectorAll('.acc-trigger').forEach(btn => {
   });
 });
 
-// footer year
+
+/* ============================================================
+   FOOTER YEAR
+============================================================ */
 document.getElementById('year').textContent = new Date().getFullYear();

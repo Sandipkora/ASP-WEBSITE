@@ -1,71 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALLOY STEEL PLANT</title>
-  <link rel="stylesheet" type="text/css" href="asp.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <script type="text/javascript" src="asphome.js"></script>
-</head>
-<body>
-
-  <header>
-    <nav class="navbar">
-      
-      <div class="company">
-        <img src="sail_logo.png" alt="SAIL">
-        <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
-      </div>
-
-      <div class="lang" role="navigation" aria-label="Language switcher">
-        <a href="#" data-lang="en">English</a> |
-        <a href="#" data-lang="hi">हिंदी</a>
-      </div>
-    </nav>
-
-  <nav class="navbar_2" aria-label="Main navigation">
-    <div class="column" id="column">
-    <div class="nav-item active" data-key="1">Home</div>
-    <div class="nav-item" data-key="2">SAIL Net</div>
-    <div class="nav-item" data-key="3">Knowledge Portal</div>
-    <div class="nav-item" data-key="4">ASP Contacts</div>
-    <div class="nav-item" data-key="5">Birthdays</div>
-    <div class="nav-item" data-key="6">Vigilances</div>
-    <div class="nav-item" data-key="7">P & A</div>
-    <div class="nav-item" data-key="8">EMS & IED</div>
-    <div class="nav-item" data-key="9">User Login</div>
-    <div class="nav-item" data-key="10">Jagraiti</div>
-    </div>
-
-    <div class="search">
-      <form class="searchBox">
-        <input type="search" placeholder="Search..." />
-        <button type="submit" class="searchBtn"><i class="fas fa-search"></i></i></button>
-      </form>
-    </div>
-
-  </nav>
-    
-
-  </header>
-
-  <nav>
-    
-  </nav>
-
-  <main>
- 
-  </main>
-
-  <footer>
-    <p>© 2025</p>
-  </footer>
-
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,15 +14,10 @@
 
 <body>
 
-  <!-- SAIL Banner Text -->
-  <!-- <div class="sail-banner">
-    <div class="sail-banner-text">#HarKaaMDeshKeNaam</div>
-  </div> -->
-
   <!-- Main Header -->
   <header class="site-header" role="banner">
 
-    <!-- Top Dark Blue Bar (like SAIL website) -->
+    <!-- Top Dark Blue Bar -->
     <div class="topbar">
       <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
       <nav class="lang" aria-label="Language">
@@ -99,22 +26,22 @@
       </nav>
     </div>
 
-    <!-- Middle White Header Section -->
-   <div class="mid-header">
-  <div class="company">
-    <img src="images/sail_logo.png" alt="SAIL logo" class="logo" />
-    <div class="title-wrap">
-      <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
-      <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+    <!-- Middle Header Section -->
+    <div class="mid-header">
+      <div class="company">
+        <img src="images/sail_logo.png" alt="SAIL logo" class="logo" />
+        <div class="title-wrap">
+          <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+          <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+        </div>
+      </div>
+
+      <div class="banner-box">
+        <img src="images/india.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
+      </div>
     </div>
-  </div>
 
-  <div class="banner-box">
-    <img src="images/harkam.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
-  </div>
-</div>
-
-    <!-- Blue Navigation Bar -->
+    <!-- Navigation -->
     <nav class="main-nav" role="navigation" aria-label="Main">
       <div class="nav-left">
         <button class="nav-item active">Home</button>
@@ -142,34 +69,26 @@
   <!-- Main Content -->
   <main>
 
-    <!-- Picture Gallery -->
-    <section class="gallery-wrapper" aria-labelledby="gallery-title">
-      <h2 id="gallery-title" class="section-title">
-        <i class="fas fa-image"></i> Picture Gallery
-      </h2>
+    <!-- FULL WIDTH SLIDESHOW -->
+<section class="hero-slider">
+  <div class="slides" id="slides">
+    <img src="images/alloy1.jpg" class="slide" alt="">
+    <img src="images/alloy2.jpeg" class="slide" alt="">
+    <img src="images/alloy3.jpg" class="slide" alt="">
+    <img src="images/alloy4.jpeg" class="slide" alt="">
+  </div>
 
-      <div class="gallery">
-        <button class="arrow left" id="prev"><i class="fas fa-chevron-left"></i></button>
+  <button class="hero-prev">&#10094;</button>
+  <button class="hero-next">&#10095;</button>
+</section>
 
-        <div class="viewer">
-          <img id="mainImage" src="images/gallery1.jpg" alt="Gallery image">
-          <div class="counter">
-            <span id="current">1</span> / <span id="total">6</span>
-          </div>
-        </div>
-
-        <button class="arrow right" id="next"><i class="fas fa-chevron-right"></i></button>
-      </div>
-
-      <div class="thumbs" id="thumbs">
-        <img class="thumb active" src="images/gallery1_thumb.jpg" data-full="images/gallery1.jpg" alt="">
-        <img class="thumb" src="images/gallery2_thumb.jpg" data-full="images/gallery2.jpg" alt="">
-        <img class="thumb" src="images/gallery3_thumb.jpg" data-full="images/gallery3.jpg" alt="">
-        <img class="thumb" src="images/gallery4_thumb.jpg" data-full="images/gallery4.jpg" alt="">
-        <img class="thumb" src="images/gallery5_thumb.jpg" data-full="images/gallery5.jpg" alt="">
-        <img class="thumb" src="images/gallery6_thumb.jpg" data-full="images/gallery6.jpg" alt="">
-      </div>
-    </section>
+<!-- THUMBNAILS UNDER SLIDER -->
+<div class="slider-thumbs">
+  <img src="images/alloy1.jpg" class="thumb-img active" data-index="0">
+  <img src="images/alloy2.jpeg" class="thumb-img" data-index="1">
+  <img src="images/alloy3.jpg" class="thumb-img" data-index="2">
+  <img src="images/alloy4.jpeg" class="thumb-img" data-index="3">
+</div>
 
     <!-- Accordion Section -->
     <section class="accordion-wrapper">
@@ -208,10 +127,25 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" role="contentinfo">
-    <div>Developed by C&IT, ASP — © <span id="year"></span></div>
-  </footer>
+  <footer class="site-footer">
+
+  <div class="footer-text">
+    <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL), a Public Sector Undertaking of the Government of India under the Ministry of Steel</p>
+    <p>sail.co.in is GIGW compliant</p>
+    <p>Designed & Developed by C&IT, Developer</p>
+  </div>
+
+  <div class="footer-logos">
+    <img src="images/steel.png" alt="Ministry of Steel" class="footer-logo">
+    <img src="images/national.png" alt="National Portal of India" class="footer-logo">
+  </div>
+
+  <div class="footer-bottom">
+    © <span id="year"></span> Steel Authority of India Limited
+  </div>
+
+</footer>
+
 
   <!-- Script -->
   <script src="script.js"></script>

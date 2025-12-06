@@ -1,0 +1,29 @@
+{
+  "bulletin": [
+    {
+      "name": "Circular - Safety Meeting.pdf",
+      "url": "../Knowledge/Bulletin/downloadCircular.pdf",
+      "date": "01-12-2025",
+      "size": "120 KB"
+    }
+  ],
+
+  "movies": [
+    {
+      "name": "Safety Awareness Video.mp4",
+      "url": "../Knowledge/Movies/downloadCircular.avi",
+      "date": "15-10-2025",
+      "size": "20 MB"
+    }
+  ],
+
+  "archives": [
+    {
+      "name": "e-UKKU VARTHE.pdf",
+      "url": "../Knowledge/Archives/downloadCircular.pdf",
+      "date": "22-01-2016",
+      "size": "956087 bytes"
+    }
+   
+  ]
+}

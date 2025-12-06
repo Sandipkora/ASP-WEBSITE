@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAILNet – Alloy Steels Plant</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Global Header/Footer CSS -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="../styles/sailnet.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================== HEADER =========================== -->
+  <header class="site-header" role="banner">
+    <div class="topbar">
+      <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
+      <nav class="lang" aria-label="Language">
+        <a href="#" class="lang-link">English</a> |
+        <a href="#" class="lang-link">हिंदी</a>
+      </nav>
+    </div>
+
+    <div class="mid-header">
+      <div class="company">
+        <img src="../images/sail_logo.png" alt="SAIL logo" class="logo" />
+        <div class="title-wrap">
+          <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+          <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+        </div>
+      </div>
+
+      <div class="banner-box">
+        <img src="../images/india.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
+      </div>
+    </div>
+
+    <nav class="main-nav" role="navigation" aria-label="Main">
+      <div class="nav-left">
+        <a href="../index.html"><button class="nav-item">Home</button></a>
+        <a href="sailnet.html"><button class="nav-item active">SAILNet</button></a>
+        <a href=""><button class="nav-item">Knowledge Portal</button></a>
+        <a href="../pages/aspcontacts.html"><button class="nav-item">ASP Contacts</button></a>
+        <a href=""><button class="nav-item">Birthdays</button></a>
+        <a href=""><button class="nav-item">Vigilance</button></a>
+        <a href=""><button class="nav-item">P & A</button></a>
+        <a href=""><button class="nav-item">EMS&IED</button></a>
+        <a href="ulogin.html"><button class="nav-item">User Login</button></a>
+        <a href=""><button class="nav-item">Jagriti</button></a>
+      </div>
+
+      <div class="nav-right">
+        <form class="searchBox" onsubmit="return false;">
+          <input type="search" placeholder="Search..." aria-label="Search">
+          <button class="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- =========================== PAGE LAYOUT =========================== -->
+  <div class="container-lg sailnet-layout my-4">
+    <div class="row gx-4">
+
+      <!-- SIDEBAR -->
+      <aside class="col-lg-3">
+        <div class="left-sidebar">
+          <h5 class="mb-3">SAILNet Quick Links</h5>
+
+          <ul class="list-group sidebar-list">
+
+            <li class="list-group-item active" onclick="loadPage('http://10.140.5.84/coportal.asp', this)">
+              <i class="fa-solid fa-globe"></i> SAIL Portal
+            </li>
+
+            <li class="list-group-item" onclick="openLink('http://10.151.6.66/sso/home.php')">
+              <i class="fa-solid fa-user-shield"></i> SSO Login
+            </li>
+
+            <li class="list-group-item" onclick="loadPage('http://10.140.5.84/myweb/dailyprofitability/home.php', this)">
+              <i class="fa-solid fa-chart-line"></i> Daily Profitability
+            </li>
+
+            <li class="list-group-item" onclick="openLink('http://10.151.6.66/pms/home.php')">
+              <i class="fa-solid fa-file"></i> PMS
+            </li>
+
+            <li class="list-group-item" onclick="openLink('http://10.140.5.84/myweb/ipss_home.asp')">
+              <i class="fa-solid fa-database"></i> IPSS
+            </li>
+
+            <li class="list-group-item" onclick="loadPage('http://10.140.5.84/myweb/ccs_home.asp', this)">
+              <i class="fa-solid fa-briefcase"></i> Corporate Cadre
+            </li>
+
+            <li class="list-group-item" onclick="openLink('https://webapp.sailcorp.in/aipr/login_aipr.aspx')">
+              <i class="fa-solid fa-file-signature"></i> Property Return
+            </li>
+
+            <li class="list-group-item" onclick="loadPage('http://10.140.5.84/myweb/cmmgco.html', this)">
+              <i class="fa-solid fa-truck"></i> Material Management
+            </li>
+
+            <li class="list-group-item" onclick="loadPage('http://10.140.5.84/myweb/taxco.asp', this)">
+              <i class="fa-solid fa-receipt"></i> Taxation
+            </li>
+
+            <li class="list-group-item" onclick="loadPage('http://10.140.5.84/myweb/fin_main.asp', this)">
+              <i class="fa-solid fa-building-columns"></i> Financial
+            </li>
+
+            <li class="list-group-item" onclick="openLink('http://10.151.5.101/')">
+              <i class="fa-solid fa-school"></i> MTI
+            </li>
+
+          </ul>
+        </div>
+      </aside>
+
+
+      <!-- MAIN CONTENT -->
+      <main class="col-lg-9">
+        <div class="main-box p-0">
+          <div class="sailportal-wrapper">
+            <iframe id="dynamicFrame" class="sailportal-frame" src="http://10.140.5.84/coportal.asp" scrolling="yes"></iframe>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </div>
+
+
+  <!-- =========================== FOOTER =========================== -->
+  <footer class="site-footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+
+    <div class="footer-text">
+      <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL),
+        a Public Sector Undertaking of the Government of India under the Ministry of Steel</p>
+      <p>sail.co.in is GIGW compliant</p>
+      <p>Designed & Developed by C&IT, Developer</p>
+    </div>
+
+    <div class="footer-logos">
+      <img src="../images/steel.png" class="footer-logo">
+      <img src="../images/national.png" class="footer-logo">
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Steel Authority of India Limited
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="../scripts/sailnet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

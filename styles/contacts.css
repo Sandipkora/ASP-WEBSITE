@@ -1,0 +1,131 @@
+/* ===============================
+   PREMIUM RESPONSIVE CONTACT TABLE
+==================================*/
+
+/* TABLE WRAPPER FIX FOR HORIZONTAL SCROLL */
+.contacts-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+}
+
+/* MAIN TABLE */
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 1200px;  /* prevents squishing on smaller screens */
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+      DESKTOP HEADER
+==================================*/
+.contacts-table thead th {
+    background: #003A70 !important;  /* SAIL Orange */
+    color: #ffffff !important;
+    font-weight: 800;
+    font-size: 15.5px;
+    padding: 14px 10px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.3);
+    white-space: nowrap;
+}
+
+.contacts-table thead th:last-child {
+    border-right: none;
+}
+
+/* TOP ROUNDING */
+.contacts-table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+.contacts-table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* ===============================
+      BODY ROWS (DESKTOP)
+==================================*/
+.contacts-table tbody td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e6eaf0;
+    border-right: 1px solid #eef1f5;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.contacts-table tbody td:last-child {
+    border-right: none;
+}
+
+/* Zebra effect */
+.contacts-table tbody tr:nth-child(even) {
+    background: #f9fbff;
+}
+
+/* Hover row */
+.contacts-table tbody tr:hover {
+    background: #eef6ff;
+    transition: 0.2s;
+}
+
+/* ===============================
+      RESPONSIVE MOBILE VIEW
+==================================*/
+@media (max-width: 992px) {
+
+    /* Remove desktop table structure */
+    .contacts-table {
+        border: none;
+        box-shadow: none;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .contacts-table thead {
+        display: none;
+    }
+
+    /* Mobile card-style row */
+    .contacts-table tbody tr {
+        display: block;
+        margin-bottom: 18px;
+        background: #ffffff;
+        border-radius: 10px;
+        border: 1px solid #e8edf5;
+        padding: 12px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    /* Mobile table cell */
+    .contacts-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 6px;
+        border: none !important;
+        border-bottom: 1px solid #e0e5eb !important;
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .contacts-table tbody td:last-child {
+        border-bottom: none !important;
+    }
+
+    /* Mobile label (the header name) */
+    .contacts-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        font-size: 13px;
+        color: #003366;
+        text-transform: uppercase;
+        margin-right: 10px;
+        flex-basis: 45%;
+    }
+}

@@ -1,0 +1,265 @@
+/* Updated sailnet.css */
+
+/* ============================================================
+   GLOBAL VARIABLES
+============================================================ */
+:root {
+    --sail-blue: #0b4b7a;
+    --sail-accent: #0b67b1;
+    --sail-green: #238a4b;
+    --sail-purple: #6f42c1;
+    --sail-orange: #e46812;
+    --dark-blue: #162959;
+}
+
+/* ============================================================
+   GENERAL PAGE
+============================================================ */
+body {
+    background: #eef5ff !important;
+    color: #123;
+    margin: 0;
+    padding: 0;
+}
+
+/* PAGE WIDTH */
+.sailnet-layout {
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   TOP BLUE BAR
+============================================================ */
+.topbar {
+    background: var(--dark-blue);
+    color: white;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-link {
+    color: #F4A424;
+    font-weight: 600;
+    text-decoration: none;
+}
+.lang-link:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   MID HEADER (Logo + Text + Banner)
+============================================================ */
+.mid-header {
+    background: white;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.title-wrap h1 {
+    font-size: 30px;
+    color: #1a367e;
+    font-weight: 800;
+}
+.subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #003A70;
+}
+
+.banner-img {
+    height: 64px;
+    object-fit: contain;
+}
+
+/* ============================================================
+   MAIN NAVBAR
+============================================================ */
+.main-nav {
+    background: var(--dark-blue);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    background: white;
+    color: #003A70;
+    padding: 7px 14px;
+    border-radius: 4px;
+    border: 1px solid #d4d4d4;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+}
+
+.nav-item.active {
+    background: #F4A424;
+    color: white;
+    border: none;
+}
+
+.nav-item:hover {
+    background: #17aef4;
+    color: white;
+}
+
+.searchBox input {
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+.searchBtn {
+    background: #F4A424;
+    border: none;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+.left-sidebar {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    height: calc(100vh - 200px);
+    position: sticky;
+    top: 105px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.sidebar-list {
+    max-height: calc(100vh - 260px);
+    overflow-y: auto;
+}
+
+.list-group-item {
+    border: 0 !important;
+    margin-bottom: 10px;
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 14px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    transition: 0.2s;
+}
+
+.list-group-item i {
+    width: 40px;
+    height: 40px;
+    background: #eef5ff;
+    color: var(--sail-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.list-group-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+}
+
+.list-group-item.active {
+    background: #003A70 !important;
+    color: white !important;
+}
+
+.list-group-item.active i {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* ============================================================
+   IFRAME CONTAINER – FIXED & ALIGNED
+============================================================ */
+.sailportal-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+/* Fix alignment + auto scroll */
+.sailportal-wrapper iframe {
+    width: 100%;
+    height: 1000px; /* Ensures full page content shows */
+    border: none;
+    display: block;
+    overflow: auto !important;
+}
+
+/* Global fix for old ASP pages */
+iframe {
+    overflow: auto !important;
+    width: 100% !important;
+}
+
+/* ============================================================
+   RESPONSIVE FIXES
+============================================================ */
+@media (max-width: 768px) {
+    .left-sidebar {
+        position: relative;
+        top: 0;
+        height: auto;
+    }
+
+    .sailportal-wrapper iframe {
+        height: 2600px;
+    }
+}
+
+/* ============================================================
+   NO EXTRA GAP BETWEEN SECTIONS
+============================================================ */
+.sailnet-layout .row {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-box {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================
+   REMOVE DUPLICATE SIA ICON
+============================================================ */
+.sia-bot {
+    display: none !important;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>ASP Contacts – Alloy Steels Plant</title>
+
+    <!-- Your existing CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/sailnet.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+
+    <!-- FontAwesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+
+    <!-- Excel Reader -->
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+    <style>
+        /* PAGE WRAPPER */
+        .contacts-wrapper {
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            margin: 40px auto;
+        }
+
+        .contacts-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: #003A70;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .contacts-date {
+            font-size: 16px;
+            font-weight: 600;
+            color: #555;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* RESPONSIVE SCROLL WRAPPER */
+        .contacts-scroll {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* DEFAULT TABLE (backup only—main is in contacts.css) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="site-header" role="banner">
+
+    <div class="topbar">
+        <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
+        <nav class="lang" aria-label="Language">
+            <a href="#" class="lang-link">English</a> |
+            <a href="#" class="lang-link">हिंदी</a>
+        </nav>
+    </div>
+
+    <div class="mid-header">
+        <div class="company">
+            <img src="../images/sail_logo.png" alt="SAIL logo" class="logo" />
+            <div class="title-wrap">
+                <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+                <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+            </div>
+        </div>
+
+        <div class="banner-box">
+            <img src="../images/india.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
+        </div>
+    </div>
+
+    <nav class="main-nav" role="navigation">
+        <div class="nav-left">
+            <a href="../index.html"><button class="nav-item">Home</button></a>
+            <a href="sailnet.html"><button class="nav-item">SAILNet</button></a>
+            <a href="#"><button class="nav-item">Knowledge Portal</button></a>
+            <a href="aspcontacts.html"><button class="nav-item active">ASP Contacts</button></a>
+            <a href="#"><button class="nav-item">Birthdays</button></a>
+            <a href="#"><button class="nav-item">Vigilance</button></a>
+            <a href="#"><button class="nav-item">P & A</button></a>
+            <a href="#"><button class="nav-item">EMS&IED</button></a>
+            <a href="ulogin.html"><button class="nav-item">User Login</button></a>
+            <a href="#"><button class="nav-item">Jagriti</button></a>
+        </div>
+
+        <div class="nav-right">
+            <form class="searchBox" onsubmit="return false;">
+                <input type="search" placeholder="Search..." aria-label="Search">
+                <button class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </nav>
+
+</header>
+<!-- ========================= END HEADER ========================= -->
+
+<div class="container-lg">
+
+    <div class="contacts-wrapper">
+
+        <div class="contacts-title">ASP Contacts (Updated)</div>
+        <div class="contacts-date">As on 01.09.2025</div>
+
+        <!-- SCROLL WRAPPER -->
+        <div class="contacts-scroll">
+            <div id="contactsTable">Loading contacts…</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="site-footer">
+    <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+
+    <div class="footer-text">
+        <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL),
+        a Public Sector Undertaking of the Government of India under the Ministry of Steel</p>
+        <p>sail.co.in is GIGW compliant</p>
+        <p>Designed & Developed by C&IT, Developer</p>
+    </div>
+
+    <div class="footer-logos">
+        <img src="../images/steel.png" class="footer-logo">
+        <img src="../images/national.png" class="footer-logo">
+    </div>
+
+    <div class="footer-bottom">© 2025 Steel Authority of India Limited</div>
+</footer>
+
+<!-- ========================= JS TO LOAD EXCEL ========================= -->
+<script>
+loadContacts();
+
+function loadContacts() {
+    fetch("../Excel/CONTACT.xlsx")
+        .then(res => res.arrayBuffer())
+        .then(buffer => {
+            const workbook = XLSX.read(buffer, { type: "array" });
+            const sheet = workbook.Sheets[workbook.SheetNames[0]];
+            const rows = XLSX.utils.sheet_to_json(sheet, { header: 1 });
+
+            const headerRow = rows[1];      // Actual headers
+            const dataRows = rows.slice(2); // Skip top 2 rows
+
+            renderTable(headerRow, dataRows);
+        });
+}
+
+function renderTable(header, data) {
+
+    let html = '<table class="contacts-table"><thead><tr>';
+
+    header.forEach(col => {
+        html += `<th>${col}</th>`;
+    });
+
+    html += '</tr></thead><tbody>';
+
+    data.forEach(row => {
+        html += '<tr>';
+        row.forEach((col, i) => {
+            html += `<td data-label="${header[i]}">${col}</td>`;
+        });
+        html += '</tr>';
+    });
+
+    html += '</tbody></table>';
+
+    document.getElementById("contactsTable").innerHTML = html;
+}
+</script>
+
+</body>
+</html>

@@ -1,32 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ALLOY STEEL PLANT — Home</title>
+  <title>ALLOY STEEL PLANT - Home</title>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Local stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- Main Header -->
   <header class="site-header" role="banner">
 
-    <!-- Top Dark Blue Bar -->
     <div class="topbar">
       <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
       <nav class="lang" aria-label="Language">
-        <a href="#" class="lang-link">English</a> | 
+        <a href="#" class="lang-link">English</a> |
         <a href="#" class="lang-link">हिंदी</a>
       </nav>
     </div>
 
-    <!-- Middle Header Section -->
     <div class="mid-header">
       <div class="company">
         <img src="images/sail_logo.png" alt="SAIL logo" class="logo" />
@@ -41,19 +37,18 @@
       </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="main-nav" role="navigation" aria-label="Main">
       <div class="nav-left">
-        <button class="nav-item active">Home</button>
-        <button class="nav-item">SAILNet</button>
-        <button class="nav-item">Knowledge Portal</button>
-        <button class="nav-item">ASP Contacts</button>
-        <button class="nav-item">Birthdays</button>
-        <button class="nav-item">Vigilance</button>
-        <button class="nav-item">P & A</button>
-        <button class="nav-item">EMS&IED</button>
-        <button class="nav-item">User Login</button>
-        <button class="nav-item">Jagriti</button>
+        <a href="index.html"><button class="nav-item active">Home</button></a>
+        <a href="pages/sailnet.html"><button class="nav-item">SAILNet</button></a>
+        <a href="pages/knowledgeportal.html"><button class="nav-item">Knowledge Portal</button></a>
+        <a href="pages/aspcontacts.html"><button class="nav-item">ASP Contacts</button></a>
+        <a href=""><button class="nav-item">Birthdays</button></a>
+        <a href=""><button class="nav-item">Vigilance</button></a>
+        <a href=""><button class="nav-item">P & A</button></a>
+        <a href="pages/ems_ied.html"><button class="nav-item">EMS&IED</button></a>
+        <a href="ulogin.html"><button class="nav-item">User Login</button></a>
+        <a href=""><button class="nav-item">Jagriti</button></a>
       </div>
 
       <div class="nav-right">
@@ -69,86 +64,248 @@
   <!-- Main Content -->
   <main>
 
-    <!-- FULL WIDTH SLIDESHOW -->
-<section class="hero-slider">
-  <div class="slides" id="slides">
-    <img src="images/alloy1.jpg" class="slide" alt="">
-    <img src="images/alloy2.jpeg" class="slide" alt="">
-    <img src="images/alloy3.jpg" class="slide" alt="">
-    <img src="images/alloy4.jpeg" class="slide" alt="">
-  </div>
+    <section class="hero-slider">
+      <div class="slides" id="slides">
+        <img src="images/alloy1.jpg" class="slide" alt="">
+        <img src="images/alloy2.jpeg" class="slide" alt="">
+        <img src="images/alloy3.jpg" class="slide" alt="">
+        <img src="images/alloy4.jpeg" class="slide" alt="">
+      </div>
 
-  <button class="hero-prev">&#10094;</button>
-  <button class="hero-next">&#10095;</button>
-</section>
+      <button class="hero-prev">&#10094;</button>
+      <button class="hero-next">&#10095;</button>
+    </section>
 
-<!-- THUMBNAILS UNDER SLIDER -->
-<div class="slider-thumbs">
-  <img src="images/alloy1.jpg" class="thumb-img active" data-index="0">
-  <img src="images/alloy2.jpeg" class="thumb-img" data-index="1">
-  <img src="images/alloy3.jpg" class="thumb-img" data-index="2">
-  <img src="images/alloy4.jpeg" class="thumb-img" data-index="3">
-</div>
 
-    <!-- Accordion Section -->
-    <section class="accordion-wrapper">
-      <div class="accordion">
+    <div class="slider-thumbs">
+      <img src="images/alloy1.jpg" class="thumb-img active" data-index="0">
+      <img src="images/alloy2.jpeg" class="thumb-img" data-index="1">
+      <img src="images/alloy3.jpg" class="thumb-img" data-index="2">
+      <img src="images/alloy4.jpeg" class="thumb-img" data-index="3">
+    </div>
 
-        <button class="acc-trigger">
-          About Us <span class="acc-icon">▸</span>
-        </button>
-        <div class="acc-panel">
-          Alloy Steels Plant (ASP), Durgapur — a short about text here...
+    <section class="unified-tabs" aria-label="Information tabs">
+      <div class="ut-card">
+
+        <div class="ut-left">
+          <button class="ut-tab active" data-target="panel-about" data-color="#F4A424" id="u-tab-1" role="tab"
+            aria-selected="true">About Us</button>
+          <button class="ut-tab" data-target="panel-team" data-color="#F4A424" id="u-tab-2" role="tab"
+            aria-selected="false">ASP Management Team</button>
+          <button class="ut-tab" data-target="panel-griev" data-color="#F4A424" id="u-tab-3" role="tab"
+            aria-selected="false">Liaison & Grievance</button>
+          <button class="ut-tab" data-target="panel-contact" data-color="#F4A424" id="u-tab-4" role="tab"
+            aria-selected="false">Contact Us</button>
         </div>
 
-        <button class="acc-trigger">
-          ASP Management Team <span class="acc-icon">▸</span>
-        </button>
-        <div class="acc-panel">
-          Management team details / links...
-        </div>
+        <div class="ut-right">
+          <div id="panel-about" class="ut-panel active" role="tabpanel" aria-labelledby="u-tab-1">
+            <div class="ut-content">
+              <h2>About Us</h2>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;Alloy Steels Plant, better known as <b>ASP</b>, is the pioneer in production of
+                alloy and special steels. It was commissioned with an initial capacity of 1,00,000 tonnes of ingot steel
+                and 60,000 tonnes of saleable steel.
+                Through two phases of expansion and modernization, the capacity has been revised to 2.46 lakh tonnes of
+                liquid steel and 1.78 lakh tonnes of saleable steel.
+              </p>
+              <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;ASP is the recipient of ISO-9001 (2000) certification for the entire plant. It
+                is equipped with state-of-the-art technology for producing world-class quality <b>alloy and special
+                  steels</b>. The plant has one <b>slab-cum-twin bloom continuous casting machine</b>, the only one of
+                its kind in India. It is specially designed for casting special steels like Austenitic and Ferritic
+                stainless
+                steel and a variety of non-stainless steels including <b>bulletproof steel</b>. The continuous casting
+                machine is equipped with a state-of-art <b>Electro-Magnetic Stirrer</b> in its mould for casting Blooms.
+              </p>
+            </div>
+          </div>
 
-        <button class="acc-trigger">
-          Liaison and Grievance <span class="acc-icon">▸</span>
-        </button>
-        <div class="acc-panel">
-          Grievance contact info and process...
-        </div>
+          <div id="panel-team" class="ut-panel" role="tabpanel" aria-labelledby="u-tab-2" hidden>
+            <div class="ut-content">
+              <h2>ASP Management Team</h2>
+              <div class="mtbox">
+                <div class="box1">
+                  <img src="IMAGES/ads/EDSS.jpg" alt="SAIL" class="ED-img">
+                  <p>Mr. S. Subbaraj</p>
+                  <p><b>Executive Director</b></p>
+                </div>
+                <div class="mtbox-row">
+                  <div class="box2">
+                    <img src="IMAGES/ads/CGM1JPK.jpg" alt="SAIL" class="CGM1-img">
+                    <p>Mr. J K Pradhan</p>
+                    <p><b>Chief General Manager I/C<br>(WORKS) </b></p>
+                  </div>
+                  <div class="box3">
+                    <img src="IMAGES/ads/CGM2KGT.jpg" alt="SAIL" class="CGM2-img">
+                    <p>Mr. K G Thakurta</p>
+                    <p><b>Chief General Manager<br>(ELECTRICAL, AUTOMATION & CONTRACTS)</b></p>
+                  </div>
+                  <div class="box4">
+                    <img src="IMAGES/ads/Sampleperson.jpg" alt="SAIL" class="CGM3-img">
+                    <p>Mr. S K Srivastava</p>
+                    <p><b>Chief General Manager<br>(PROJECTS & MM)</b></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <button class="acc-trigger">
-          Contact Us <span class="acc-icon">▸</span>
-        </button>
-        <div class="acc-panel">
-          Address, phone numbers, map etc...
+          <div id="panel-griev" class="ut-panel" role="tabpanel" aria-labelledby="u-tab-3" hidden>
+            <div class="ut-content">
+              <h2>Liaison & Grievance</h2>
+              <div class="lo-row">
+
+                <div class="lo-card">
+                  <div class="lo-label">LO for OBC</div>
+                  <div class="lo-content">
+                    <div class="person-mini">
+                      <div class="name">Shri Dashrath Rawani</div>
+                      <div class="role">Sr.Mgr (P&A)</div>
+                      <div class="meta">Mob: +91-9434798997</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lo-card">
+                  <div class="lo-label">LO for SC and PWD</div>
+                  <div class="lo-content">
+                    <div class="person-mini">
+                      <div class="name">Shri Somnath Barik</div>
+                      <div class="role">GM (P&A)</div>
+                      <div class="meta">Mob: +91-9434798895</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lo-card">
+                  <div class="lo-label">LO for ST</div>
+                  <div class="lo-content">
+                    <div class="person-mini">
+                      <div class="name">Shri Marsal Francis Topno</div>
+                      <div class="role">GM (FM-MILLS/MED)</div>
+                      <div class="meta">Mob: +91-9434798865</div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <h3 class="griev-heading">Grievance Redressal Committee</h3>
+
+              <div class="griev-row">
+
+                <div class="griev-card">
+                  <div class="lo-label">For SCs/STs</div>
+                  <div class="lo-content">
+                    <ol class="person-list">
+                      <li>Shri Nirmal Kanti Naskar, GM (MF-MILLS/MED)</li>
+                      <li>Shri Somnath Barik, GM(P&A) & Liaison officer for SC & PWD</li>
+                      <li>Anindita Saha, AGM (CONTRACT,BE & IED)</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="griev-card">
+                  <div class="lo-label">For OBCs</div>
+                  <div class="lo-content">
+                    <ol class="person-list">
+                      <li>Shri Sarfraj Ansari,DGM (CONDITIONING & HTF)</li>
+                      <li>Shri Dashrath Rawani,Sr Mgr (P&A) & Liaison Officer for OBC</li>
+                      <li>Priyanka Shaw,Dy Mgr (F&A)</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <div class="other-card">
+                  <a href="">Recruitment Roster for OCTT</a>
+                </div>
+
+                <div class="other-card">
+                  <a href="">Recruitment Roster for ACTT</a>
+                </div>
+
+                <div class="other-card">
+                  <a href="">Internal Complaint Committee</a>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div id="panel-contact" class="ut-panel" role="tabpanel" aria-labelledby="u-tab-4" hidden>
+            <div class="ut-content contact-wrapper">
+
+              <h2>Contact Us</h2>
+
+              <div class="contact-boxes">
+
+                <div class="contact-card">
+                  <b class="cont-a">Mr. S. Kumar</b><br>
+                  GM (C&IT)<br>
+                  Ispat Bhawan<br>
+                  Durgapur 713208, West Bengal<br>
+                  Email: <a href="mailto:Sunil.Kumar69@Sail.In"><b class="cont-b">Sunil.Kumar69@Sail.In</b></a><br>
+                  Tel: +91-943-479-8756<br>
+                  Pax: 8993
+                </div>
+
+                <div class="contact-card">
+                  <b class="cont-a">Mr. S. Saurabh</b><br>
+                  AGM (C&IT)<br>
+                  Ispat Bhawan<br>
+                  Durgapur 713208, West Bengal<br>
+                  Email: <a href="mailto:sidharth.saurabh@gmail.com"><b
+                      class="cont-b">sidharth.saurabh@gmail.com</b></a><br>
+                  Tel: +91-943-479-8963<br>
+                  Pax: 8572
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
       </div>
     </section>
 
+
+
   </main>
 
   <footer class="site-footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
 
-  <div class="footer-text">
-    <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL), a Public Sector Undertaking of the Government of India under the Ministry of Steel</p>
-    <p>sail.co.in is GIGW compliant</p>
-    <p>Designed & Developed by C&IT, Developer</p>
-  </div>
+    <div class="footer-text">
+      <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL), a Public
+        Sector Undertaking of the Government of India under the Ministry of Steel</p>
+      <p>sail.co.in is GIGW compliant</p>
+      <p>Designed & Developed by C&IT, Developer</p>
+    </div>
 
-  <div class="footer-logos">
-    <img src="images/steel.png" alt="Ministry of Steel" class="footer-logo">
-    <img src="images/national.png" alt="National Portal of India" class="footer-logo">
-  </div>
+    <div class="footer-logos">
+      <img src="images/steel.png" alt="Ministry of Steel" class="footer-logo">
+      <img src="images/national.png" alt="National Portal of India" class="footer-logo">
+    </div>
 
-  <div class="footer-bottom">
-    © <span id="year"></span> Steel Authority of India Limited
-  </div>
+    <div class="footer-bottom">
+      © <span id="year"></span> Steel Authority of India Limited
+    </div>
 
-</footer>
+  </footer>
 
 
   <!-- Script -->
   <script src="script.js"></script>
 
 </body>
+
 </html>

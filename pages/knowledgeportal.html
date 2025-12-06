@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Knowledge Portal — Alloy Steel Plant</title>
+
+  <!-- GLOBAL CSS -->
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../styles/sailnet.css">
+
+  <!-- KNOWLEDGE PORTAL CSS -->
+  <link rel="stylesheet" href="../styles/knowledge.css">
+
+  <!-- Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+</head>
+
+<body>
+
+<!-- ========================= HEADER ========================= -->
+<header class="site-header">
+
+  <div class="topbar">
+    <span>Steel Authority of India Limited</span>
+    <nav><a href="#">English</a> | <a href="#">हिंदी</a></nav>
+  </div>
+
+  <div class="mid-header container-lg d-flex align-items-center justify-content-between py-3">
+      <div class="company d-flex align-items-center">
+          <img src="../images/sail_logo.png" class="logo">
+          <div class="title-wrap">
+              <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+              <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+          </div>
+      </div>
+
+      <div class="banner-box d-none d-lg-block">
+          <img src="../images/india.png" class="banner-img">
+      </div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="nav-left">
+      <a href="../index.html"><button class="nav-item">Home</button></a>
+      <a href="sailnet.html"><button class="nav-item">SAILNet</button></a>
+      <a href="knowledgeportal.html"><button class="nav-item active">Knowledge Portal</button></a>
+      <a href="aspcontacts.html"><button class="nav-item">ASP Contacts</button></a>
+      <button class="nav-item">Birthdays</button>
+      <button class="nav-item">Vigilance</button>
+      <button class="nav-item">P & A</button>
+      <button class="nav-item">EMS&IED</button>
+      <a href="ulogin.html"><button class="nav-item">User Login</button></a>
+      <button class="nav-item">Jagriti</button>
+    </div>
+
+    <div class="nav-right">
+      <form class="searchBox">
+        <input type="search" placeholder="Search...">
+        <button><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+</header>
+
+<!-- ========================= MAIN BODY ========================= -->
+<main class="container page">
+
+    <!-- <section class="kp-hero">
+        <h2>Knowledge Portal</h2>
+        <p class="lead">Browse bulletins, movies & archived documents.</p>
+    </section> -->
+
+    <div class="kp-layout">
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside class="kp-sidebar">
+            <div class="kp-nav">
+
+                <button class="kp-nav-item active" data-target="sectionBulletin">
+                    Bulletin Board
+                </button>
+
+                <button class="kp-nav-item" data-target="sectionMovies">
+                    Movies
+                </button>
+
+                <button class="kp-nav-item" data-target="sectionArchives">
+                    Archives
+                </button>
+
+            </div>
+        </aside>
+
+        <!-- ============ RIGHT SIDE CONTENT ============ -->
+        <div class="kp-content">
+
+            <!-- BULLETIN -->
+            <section id="sectionBulletin" class="kp-section">
+                <h2>Bulletin Board</h2>
+
+                <div class="kp-controls">
+                    <input id="searchBulletin" placeholder="Search files...">
+                    <select id="sortBulletin">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="az">A → Z</option>
+                        <option value="za">Z → A</option>
+                    </select>
+                </div>
+
+                <div id="bulletinTable"></div>
+            </section>
+
+            <!-- MOVIES -->
+            <section id="sectionMovies" class="kp-section" hidden>
+                <h2>Movies</h2>
+
+                <div class="kp-controls">
+                    <input id="searchMovies" placeholder="Search files...">
+                    <select id="sortMovies">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="az">A → Z</option>
+                        <option value="za">Z → A</option>
+                    </select>
+                </div>
+
+                <div id="moviesTable"></div>
+            </section>
+
+            <!-- ARCHIVES -->
+            <section id="sectionArchives" class="kp-section" hidden>
+                <h2>Archives</h2>
+
+                <div class="kp-controls">
+                    <input id="searchArchives" placeholder="Search files...">
+                    <select id="sortArchives">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="az">A → Z</option>
+                        <option value="za">Z → A</option>
+                    </select>
+                </div>
+
+                <div id="archivesTable"></div>
+            </section>
+
+        </div>
+    </div>
+
+</main>
+
+
+<!-- ========================= FOOTER ========================= -->
+<footer class="site-footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+
+    <div class="footer-text">
+      <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL), a Public
+        Sector Undertaking of the Government of India under the Ministry of Steel</p>
+      <p>sail.co.in is GIGW compliant</p>
+      <p>Designed & Developed by C&IT, Developer</p>
+    </div>
+
+    <div class="footer-logos">
+      <img src="images/steel.png" alt="Ministry of Steel" class="footer-logo">
+      <img src="images/national.png" alt="National Portal of India" class="footer-logo">
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Steel Authority of India Limited
+    </div>
+
+  </footer>
+
+<!-- JS -->
+<script src="../scripts/knowledge.js" defer></script>
+
+</body>
+</html>

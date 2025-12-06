@@ -1,0 +1,217 @@
+/* ============================================================
+   KNOWLEDGE PORTAL — PREMIUM + STANDARD ASP UI (FINAL VERSION)
+============================================================ */
+
+/* ------------------------------
+   MAIN LAYOUT (Sidebar + Content)
+------------------------------ */
+.kp-layout {
+    display: flex;
+    gap: 18px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Sidebar */
+.kp-sidebar {
+    width: 240px;
+    background: #B9D9EB;
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Sidebar nav items */
+.kp-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kp-nav-item {
+    padding: 12px 14px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #c7d7ef;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #162959;
+
+    cursor: pointer;
+    text-align: left;
+    transition: .25s;
+}
+
+.kp-nav-item:hover {
+    background: #162959;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.kp-nav-item.active {
+    background: #F4A424;
+    color: #162959;
+    border-color: #F4A424;
+    box-shadow: 0 10px 22px rgba(244,164,36,0.35);
+}
+
+/* ------------------------------
+   RIGHT SIDE CONTENT BOX
+------------------------------ */
+.kp-content {
+    flex: 1;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.kp-content h2 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #162959;
+    margin-bottom: 15px;
+}
+
+/* Hide inactive sections */
+.kp-section[hidden] {
+    display: none;
+}
+
+/* ------------------------------
+   SEARCH + SORT CONTROLS
+------------------------------ */
+.kp-controls {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.kp-controls input,
+.kp-controls select {
+    padding: 8px 10px;
+    border: 1px solid #ccd6e0;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 14px;
+}
+
+/* ------------------------------
+   TABLE — Classic ASP Modern Look
+------------------------------ */
+.kp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+}
+
+.kp-table thead th {
+    background: #F4A424;
+    color: #fff;
+    font-weight: 800;
+
+    padding: 12px;
+    border: 1px solid #d0891a;
+    text-align: left;
+}
+
+.kp-table td {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #003A70;
+}
+
+/* Zebra pattern */
+.kp-table tbody tr:nth-child(even) td {
+    background: #FFF8E5;
+}
+
+/* Hover */
+.kp-table tbody tr:hover td {
+    background: #f1f7ff;
+}
+
+/* File link */
+.file-link {
+    color: #003A70;
+    font-weight: 600;
+    text-decoration: none;
+}
+.file-link:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   LOADING TEXT
+------------------------------ */
+.loading {
+    padding: 18px;
+    text-align: center;
+    font-weight: 600;
+    color: #444;
+}
+
+/* ------------------------------
+   RESPONSIVE — Mobile Mode
+------------------------------ */
+@media (max-width: 900px) {
+
+    .kp-layout {
+        flex-direction: column;
+    }
+
+    .kp-sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .kp-nav {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .kp-nav-item {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    /* TABLE → Mobile Card Style */
+    .kp-table thead {
+        display: none;
+    }
+
+    .kp-table tbody tr {
+        display: block;
+        margin-bottom: 14px;
+        padding: 10px;
+
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    }
+
+    .kp-table tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 6px;
+        border-bottom: 1px dashed #d6d6d6;
+    }
+
+    .kp-table tbody td:last-child {
+        border-bottom: none;
+    }
+
+    .kp-table tbody td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #162959;
+        margin-right: 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+}

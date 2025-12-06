@@ -1,0 +1,147 @@
+/* ---------------------------
+   WRAPPER LAYOUT
+---------------------------- */
+.ems-wrapper {
+    max-width: 1250px;
+    margin: 30px auto;
+    display: flex;
+    gap: 20px;
+}
+
+/* ---------------------------
+   SIDEBAR
+---------------------------- */
+.ems-sidebar {
+    width: 240px;
+    background: #B9D9EB;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.ems-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ems-nav-item {
+    padding: 12px 14px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #cbd7ea;
+    font-weight: 700;
+    color: #0b3970;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .25s ease;
+}
+
+.ems-nav-item:hover {
+    background: #0b3970;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.ems-nav-item.active {
+    background: #F4A424;
+    color: #0b3970;
+    border-color: #F4A424;
+}
+
+/* ---------------------------
+   RIGHT CONTENT PANEL
+---------------------------- */
+.ems-content {
+    flex: 1;
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.ems-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #003A70;
+}
+
+.ems-sub {
+    margin-top: -6px;
+    color: #465a72;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b3970;
+}
+
+/* ---------------------------
+   TABLE — SAME AS KNOWLEDGE PORTAL
+---------------------------- */
+.kp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.kp-table thead th {
+    background: #F4A424;
+    color: #fff;
+    padding: 12px;
+    font-weight: 800;
+    border: 1px solid #c88a1a;
+}
+
+.kp-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    color: #003A70;
+}
+
+.kp-table tbody tr:nth-child(even) td {
+    background: #FFF8E5;
+}
+
+.kp-table tbody tr:hover td {
+    background: #f1f7ff;
+}
+
+.file-link {
+    color: #003A70;
+    font-weight: 700;
+    text-decoration: none;
+}
+.file-link:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------
+   PANEL TOGGLE
+---------------------------- */
+.ems-panel { display: none; }
+.ems-panel.show { display: block; }
+
+/* ---------------------------
+   RESPONSIVE
+---------------------------- */
+@media (max-width: 900px) {
+    .ems-wrapper {
+        flex-direction: column;
+    }
+    .ems-sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .ems-nav {
+        flex-direction: row;
+    }
+    .ems-nav-item {
+        white-space: nowrap;
+    }
+}

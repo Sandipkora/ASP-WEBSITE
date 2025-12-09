@@ -1,0 +1,239 @@
+/* ======================================
+   P & A LAYOUT
+====================================== */
+
+.pa-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* Left column (sidebar) */
+.pa-left {
+  width: 260px;
+  flex: 0 0 260px;
+}
+
+/* Right column (content) */
+.pa-right {
+  flex: 1;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ======================================
+   SIDEBAR
+====================================== */
+
+.pa-sidebar {
+  background: linear-gradient(180deg, #d9efff, #c7e3f6);
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Main category buttons (RULES, CIRCULARS, etc.) */
+.navl-item {
+  width: 100%;
+  padding: 10px 14px;
+  background: #ffffff;
+  border: 1px solid #ccd6f5;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #162959;
+  margin-bottom: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.25s;
+}
+
+.navl-item:hover {
+  background: #162959;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.navl-item.active {
+  background: #F4A424;
+  color: #162959;
+  border-color: #F4A424;
+  box-shadow: 0 8px 18px rgba(244, 164, 36, 0.35);
+}
+
+/* Submenu wrapper (CDA, Standing Orders, etc.) */
+.pa-submenu {
+  display: none;
+  padding-left: 12px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+/* JS toggles .show class */
+.pa-submenu.show {
+  display: block;
+}
+
+/* Submenu buttons */
+.navl-sub {
+  display: block;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ccd6f5;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #1a335d;
+  cursor: pointer;
+  margin-bottom: 6px;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.navl-sub:hover {
+  background: #1a335d;
+  color: #ffffff;
+}
+
+.navl-sub.active {
+  background: #F4A424;
+  color: #162959;
+  border-color: #F4A424;
+}
+
+/* ======================================
+   RIGHT SIDE – HEADER + CONTROLS
+====================================== */
+
+.pa-header {
+  margin-bottom: 14px;
+}
+
+.pa-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #162959;
+}
+
+/* Search + sort row */
+.pa-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.pa-controls input,
+.pa-controls select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #c6ccd5;
+  font-size: 14px;
+}
+
+/* ======================================
+   TABLE STYLING
+====================================== */
+
+.pa-table-wrap {
+  overflow-x: auto;
+}
+
+.pa-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.pa-table thead th {
+  background: #F4A424;
+  color: #ffffff;
+  padding: 10px 12px;
+  border: 1px solid #c88a1a;
+  font-weight: 800;
+  text-align: left;
+}
+
+.pa-table td {
+  padding: 10px 12px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+  color: #003A70;
+}
+
+/* Zebra rows */
+.pa-table tbody tr:nth-child(even) td {
+  background: #FFF8E5;
+}
+
+/* Hover row */
+.pa-table tbody tr:hover td {
+  background: #f1f7ff;
+}
+
+/* Download / file links */
+.pa-table a {
+  color: #003A70;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pa-table a:hover {
+  text-decoration: underline;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 992px) {
+  .pa-layout {
+    flex-direction: column;
+  }
+
+  .pa-left {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .pa-right {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .pa-table thead {
+    display: none;
+  }
+
+  .pa-table tbody tr {
+    display: block;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  }
+
+  .pa-table tbody td {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #e3e3e3;
+  }
+
+  .pa-table tbody td:last-child {
+    border-bottom: none;
+  }
+
+  .pa-table tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #162959;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+}

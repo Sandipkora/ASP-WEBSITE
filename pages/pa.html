@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>P & A — Alloy Steel Plant</title>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles/sailnet.css">
+    <link rel="stylesheet" href="../styles/pa.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+
+        <div class="topbar">
+            <span style="color:#F4A424;font-weight:600">Steel Authority of India Limited</span>
+            <nav class="lang" aria-label="Language">
+                <a href="#" class="lang-link">English</a> |
+                <a href="#" class="lang-link">हिंदी</a>
+            </nav>
+        </div>
+
+        <div class="mid-header">
+            <div class="company">
+                <img src="../images/sail_logo.png" alt="SAIL logo" class="logo" />
+                <div class="title-wrap">
+                    <h1>ALLOY STEEL PLANT, DURGAPUR</h1>
+                    <p class="subtitle">A Unit of Steel Authority of India Limited</p>
+                </div>
+            </div>
+
+            <div class="banner-box">
+                <img src="../images/india.png" alt="#HarKaaMDeshKeNaam" class="banner-img">
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="../index.html"><button class="nav-item">Home</button></a>
+                <a href="sailnet.html"><button class="nav-item">SAILNet</button></a>
+                <a href="knowledgeportal.html"><button class="nav-item">Knowledge Portal</button></a>
+                <a href="aspcontacts.html"><button class="nav-item">ASP Contacts</button></a>
+                <button class="nav-item">Birthdays</button>
+                <button class="nav-item">Vigilance</button>
+                <button class="nav-item active">P & A</button>
+                <a href="ems_ied.html"><button class="nav-item">EMS&IED</button></a>
+                <a href="ulogin.html"><button class="nav-item">User Login</button></a>
+                <button class="nav-item">Jagriti</button>
+            </div>
+
+            <div class="nav-right">
+                <form class="searchBox" onsubmit="return false;">
+                    <input type="search" placeholder="Search..." aria-label="Search">
+                    <button class="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container page">
+
+        <section class="pa-layout">
+
+            <!-- ✅ SIDEBAR -->
+            <div class="pa-left">
+                <div class="pa-sidebar">
+
+                    <!-- ✅ RULES -->
+                    <button class="navl-item has-sub" data-target="rulesSub">RULES ▸</button>
+                    <div class="pa-submenu" id="rulesSub">
+                        <button class="navl-sub" data-section="cda">CDA</button>
+                        <button class="navl-sub" data-section="standing">Standing Orders</button>
+                        <button class="navl-sub" data-section="sailmanual">SAIL Manual</button>
+                    </div>
+
+                    <!-- ✅ CIRCULARS -->
+                    <button class="navl-item has-sub" data-target="circularsSub">CIRCULARS ▸</button>
+                    <div class="pa-submenu" id="circularsSub">
+                        <button class="navl-sub" data-section="jo">Policy</button>
+                        <button class="navl-sub" data-section="manpower">Routine Circulars</button>
+                    </div>
+
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        JO Manual
+                    </button>
+
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        Manpower Statistics
+                    </button>
+
+
+                    <!-- ✅ PAY / PERQUISITES -->
+                    <button class="navl-item has-sub" data-target="paySub">PAY / PERQUISITES ▸</button>
+                    <div class="pa-submenu" id="paySub">
+                        <button class="navl-sub" data-section="tada">TA / DA</button>
+                        <button class="navl-sub" data-section="hra">HRA</button>
+                        <button class="navl-sub" data-section="lta">LTC / LTA</button>
+                    </div>
+
+                    <!-- ✅ MEDICAL -->
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        MEDICAL BENEFITS
+                    </button>
+
+
+                    <!-- ✅ HOLIDAY -->
+                    <button class="navl-item has-sub" data-target="holidaySub">HOLIDAY ▸</button>
+                    <div class="pa-submenu" id="holidaySub">
+                        <button class="navl-sub" data-section="industrial">Industrial</button>
+                        <button class="navl-sub" data-section="nonindustrial">Non-Industrial</button>
+                        <button class="navl-sub" data-section="others">Others</button>
+                    </div>
+
+                    <!-- ✅ LEAVE RULES -->
+                    <button class="navl-item has-sub" data-target="leaveSub">LEAVE RULES ▸</button>
+                    <div class="pa-submenu" id="leaveSub">
+                        <button class="navl-sub" data-section="executives">Executives</button>
+                        <button class="navl-sub" data-section="nonexecutives">Non-Executives</button>
+                        <button class="navl-sub" data-section="officestaff">Office Staff</button>
+                    </div>
+
+                    <!-- ✅ TOWNSHIP -->
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        TOWNSIP MATTERS
+                    </button>
+
+
+                    <!-- ✅ SEPARATION RULES -->
+                    <button class="navl-item has-sub" data-target="separationSub">SEPARATION RULES ▸</button>
+                    <div class="pa-submenu" id="separationSub">
+                        <button class="navl-sub" data-section="benefits">Know Your Benefits</button>
+                        <button class="navl-sub" data-section="forms">Forms</button>
+                        <button class="navl-sub" data-section="separating">Separating Employees</button>
+                    </div>
+
+                    <!-- ✅ AGREEMENTS -->
+                    <button class="navl-item has-sub" data-target="agreementsSub">AGREEMENTS ▸</button>
+                    <div class="pa-submenu" id="agreementsSub">
+                        <button class="navl-sub" data-section="nepp">NEPP</button>
+                        <button class="navl-sub" data-section="njcs">NJCS</button>
+                        <button class="navl-sub" data-section="clmou">CL-MOU</button>
+                    </div>
+
+                    <!-- ✅ VARIOUS FORMS -->
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        VARIOUS FORMS
+                    </button>
+
+
+                    <!-- ✅ PROMOTION -->
+                    <button class="navl-item has-sub" data-target="promotionSub">PROMOTION ▸</button>
+                    <div class="pa-submenu" id="promotionSub">
+                        <button class="navl-sub" data-section="promotion_exec">Executive</button>
+                        <button class="navl-sub" data-section="promotion_nonexec">Non-Executive</button>
+                    </div>
+
+                    <!-- ✅ QUICK LINK -->
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        QUICK LINKS
+                    </button>
+
+
+                    <!-- ✅ GET IN TOUCH -->
+                    <button class="navl-item navl-sub" data-section="variousforms">
+                        GET IN TOUCH
+                    </button>
+
+
+                </div>
+            </div>
+
+
+            <!-- ✅ RIGHT CONTENT -->
+            <div class="pa-right">
+
+                <div class="pa-header">
+                    <h2 id="paTitle">Standing Orders</h2>
+                </div>
+
+                <div class="pa-controls">
+                    <input id="paSearch" placeholder="Search files...">
+                    <select id="paSort">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+
+                <div class="pa-table-wrap" id="paTable"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+ <footer class="site-footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></i></a>
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+    </div>
+
+    <div class="footer-text">
+      <p>This is the official Website of Alloy Steel Plant under Steel Authority of India Limited (SAIL), a Public
+        Sector Undertaking of the Government of India under the Ministry of Steel</p>
+      <p>sail.co.in is GIGW compliant</p>
+      <p>Designed & Developed by C&IT, Developer</p>
+    </div>
+
+    <div class="footer-logos">
+      <img src="../images/steel.png" alt="Ministry of Steel" class="footer-logo">
+      <img src="../images/national.png" alt="National Portal of India" class="footer-logo">
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Steel Authority of India Limited
+    </div>
+
+  </footer>
+
+    <script src="../scripts/pa.js" defer></script>
+</body>
+
+</html>
